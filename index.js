@@ -1,7 +1,12 @@
 function randomizeArmy (){
-    let checkedArmies = ["army1", "army2", "3", "4", "5", "6", "7"];
 
-    var currentIndex = checkedArmies.length, temporaryValue, randomIndex;
+    let checkedArmies = [];
+
+    $("input:checkbox:checked").each(function () {
+        checkedArmies.push(this.value)
+    });
+
+    let currentIndex = checkedArmies.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
